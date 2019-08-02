@@ -23,7 +23,10 @@ repositories { mavenCentral() }
 dependencies {
     compile('org.springframework.boot:spring-boot-starter')
     compile('org.springframework.boot:spring-boot-starter-web')
+    compile 'org.axonframework:axon-amqp'
     testCompile('org.springframework.boot:spring-boot-starter-test')
+
+    implementation 'org.springframework.boot:spring-boot-starter-amqp'
 }
 
 dependencyManagement {
