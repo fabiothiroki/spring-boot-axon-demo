@@ -1,12 +1,15 @@
-package command;
+package command.product;
 
 import command.addproduct.AddProductCommand;
 import command.addproduct.AddProductEvent;
+import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.modelling.command.AggregateIdentifier;
+import org.axonframework.spring.stereotype.Aggregate;
 
 import static org.axonframework.modelling.command.AggregateLifecycle.apply;
 
+@Aggregate
 public class ProductAggregate {
 
     @AggregateIdentifier
@@ -14,6 +17,7 @@ public class ProductAggregate {
     private String name;
     private int quantity;
 
+    @CommandHandler
     public ProductAggregate(AddProductCommand cmd) {
         apply(new AddProductEvent(cmd.getId(), cmd.getName(), cmd.getQuantity()));
     }

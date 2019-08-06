@@ -24,7 +24,9 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter:2.1.6.RELEASE')
     compile('org.springframework.boot:spring-boot-starter-web:2.1.6.RELEASE')
 
-    compile 'org.axonframework:axon-spring-boot-starter:4.1.2'
+    compile('org.axonframework:axon-spring-boot-starter:4.1.2') {
+        exclude group: 'org.axonframework', module: 'axon-server-connector'
+    }
     compile 'org.axonframework:axon-amqp:4.0-M2'
 
     testCompile('org.springframework.boot:spring-boot-starter-test')

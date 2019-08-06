@@ -1,4 +1,4 @@
-package command;
+package command.product;
 
 import command.addproduct.AddProductEvent;
 import org.axonframework.eventhandling.EventHandler;
