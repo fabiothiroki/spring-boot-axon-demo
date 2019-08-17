@@ -10,7 +10,7 @@ public class Product {
     public Product() {}
 
     public Product(
-            final String id,
+            final Long id,
             final String name,
             final int quantity) {
         this.id = id;
@@ -19,7 +19,7 @@ public class Product {
     }
 
     @Id
-    public String id;
+    public Long id;
 
     @Column
     public String name;

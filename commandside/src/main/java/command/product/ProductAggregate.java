@@ -13,7 +13,7 @@ import static org.axonframework.modelling.command.AggregateLifecycle.apply;
 public class ProductAggregate {
 
     @AggregateIdentifier
-    private String id;
+    private Long id;
     private String name;
     private int quantity;
 

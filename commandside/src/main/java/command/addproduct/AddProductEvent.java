@@ -3,7 +3,7 @@ package command.addproduct;
 public class AddProductEvent {
 
     public AddProductEvent(
-            final String id,
+            final Long id,
             final String name,
             final int quantity) {
         this.id = id;
@@ -11,12 +11,12 @@ public class AddProductEvent {
         this.quantity = quantity;
     }
 
-    private final String id;
+    private final Long id;
     private final String name;
     private final int quantity;
 
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 

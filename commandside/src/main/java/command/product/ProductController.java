@@ -4,6 +4,7 @@ import command.addproduct.AddProductCommand;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,7 +12,7 @@ import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 
 @RestController
-@RequestMapping("/product")
+@RequestMapping("/products")
 public class ProductController {
 
     @Autowired
@@ -22,11 +23,11 @@ public class ProductController {
     private CommandGateway commandGateway;
 
     @PostMapping
-    public CompletableFuture<String> create() {
+    public CompletableFuture<String> create(@RequestBody ProductDTO dto) {
         AddProductCommand command = new AddProductCommand(
-                UUID.randomUUID().toString(),
-                "name",
-                1);
+                dto.getId(),
+                dto.getName(),
+                dto.getQuantity());
         return commandGateway.send(command);
     }
 

@@ -6,7 +6,7 @@ import org.axonframework.modelling.command.TargetAggregateIdentifier;
 public class AddProductCommand {
 
     public AddProductCommand(
-            final String id,
+            final Long id,
             final String name,
             final int quantity) {
         this.id = id;
@@ -15,11 +15,11 @@ public class AddProductCommand {
     }
 
     @TargetAggregateIdentifier
-    private final String id;
+    private final Long id;
     private final String name;
     private final int quantity;
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
