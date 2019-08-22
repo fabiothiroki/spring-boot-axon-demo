@@ -1,10 +1,13 @@
 package command.product;
 
 import command.addproduct.AddProductEvent;
+import command.updateproduct.UpdateProductEvent;
+import lombok.extern.slf4j.Slf4j;
 import org.axonframework.eventhandling.EventHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+@Slf4j
 @Component
 public class ProductEventHandler {
 
@@ -18,6 +21,15 @@ public class ProductEventHandler {
         Product product = new Product(event.getId(), event.getName(), event.getQuantity());
 
         this.productRepository.save(product);
+
+    }
+
+    @EventHandler
+    public void on(UpdateProductEvent event) {
+        System.out.println("A product was updated! " + event );
+
+//        Product product = new Product(event.getId(), event.getName(), event.getQuantity());
+//        this.productRepository.save(product);
 
     }
 }

@@ -1,12 +1,10 @@
 package command.product;
 
 import command.addproduct.AddProductCommand;
+import command.updateproduct.UpdateProductCommand;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
@@ -27,6 +25,14 @@ public class ProductController {
         AddProductCommand command = new AddProductCommand(
                 dto.getId(),
                 dto.getName(),
+                dto.getQuantity());
+        return commandGateway.send(command);
+    }
+
+    @PutMapping
+    public CompletableFuture<String> update(@RequestBody ProductDTO dto) {
+        UpdateProductCommand command = new UpdateProductCommand(
+                dto.getId(),
                 dto.getQuantity());
         return commandGateway.send(command);
     }
