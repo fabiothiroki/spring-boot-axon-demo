@@ -2,11 +2,6 @@ buildscript {
     repositories { mavenCentral() }
 }
 
-plugins {
-    id 'org.springframework.boot' version '2.1.6.RELEASE'
-    id "io.spring.dependency-management" version "1.0.5.RELEASE"
-}
-
 ext { springBootVersion = '2.1.6.RELEASE' }
 
 apply plugin: 'java'
@@ -21,7 +16,6 @@ sourceCompatibility = 1.8
 repositories { mavenCentral() }
 
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter:2.1.6.RELEASE')
     compile('org.springframework.boot:spring-boot-starter-web:2.1.6.RELEASE')
     compile('org.springframework.boot:spring-boot-starter-data-mongodb')
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.1.6.RELEASE'
