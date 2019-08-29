@@ -4,9 +4,6 @@ buildscript {
 
 ext { springBootVersion = '2.1.6.RELEASE' }
 
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'org.springframework.boot'
 
 jar {
     version = '0.0.1-SNAPSHOT'
@@ -16,24 +13,11 @@ sourceCompatibility = 1.8
 repositories { mavenCentral() }
 
 dependencies {
-//    compile('org.springframework.boot:spring-boot-starter-web:2.1.6.RELEASE')
     compile('org.springframework.boot:spring-boot-starter-data-mongodb')
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.1.6.RELEASE'
 
     compile('org.axonframework:axon-spring-boot-starter:4.1.2') {
         exclude group: 'org.axonframework', module: 'axon-server-connector'
     }
 
     compile('org.axonframework.extensions.mongo:axon-mongo:4.1')
-
-    testCompile('org.springframework.boot:spring-boot-starter-test')
-
-    compileOnly 'org.projectlombok:lombok:1.18.8'
-    annotationProcessor 'org.projectlombok:lombok:1.18.8'
-
-    runtimeOnly 'org.postgresql:postgresql:42.2.5'
-}
-
-dependencyManagement {
-    imports { mavenBom("org.springframework.boot:spring-boot-dependencies:${springBootVersion}") }
 }
