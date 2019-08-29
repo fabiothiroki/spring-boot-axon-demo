@@ -14,6 +14,8 @@ plugins {
 allprojects {
     apply plugin: 'java'
     apply plugin: 'org.springframework.boot'
+    apply plugin: 'eclipse'
+
 
     repositories {
         mavenCentral()
@@ -21,7 +23,7 @@ allprojects {
 
     dependencies {
         compile('org.springframework.boot:spring-boot-starter:2.1.6.RELEASE')
-//        compile('org.springframework.boot:spring-boot-starter-web:2.1.6.RELEASE')
+        compile('org.springframework.boot:spring-boot-starter-web:2.1.6.RELEASE')
 //        compile('org.springframework.boot:spring-boot-starter-data-mongodb')
 //        implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.1.6.RELEASE'
 //
@@ -39,7 +41,3 @@ allprojects {
 //        runtimeOnly 'org.postgresql:postgresql:42.2.5'
     }
 }
-
-//dependencies {
-//    implementation project(':commandside')
-//}
