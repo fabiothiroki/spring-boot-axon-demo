@@ -1,3 +1,4 @@
 rootProject.name = 'axon-demo'
 include 'commandside'
+include 'queryside'
 
