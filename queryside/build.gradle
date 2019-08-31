@@ -2,11 +2,11 @@ buildscript {
     repositories { mavenCentral() }
 }
 
-plugins {
-    id 'java'
-}
+ext { springBootVersion = '2.1.6.RELEASE' }
 
-version 'unspecified'
+jar {
+    version = '0.0.1-SNAPSHOT'
+}
 
 sourceCompatibility = 1.8
 
