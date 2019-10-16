@@ -32,3 +32,12 @@ allprojects {
         runtimeOnly 'org.postgresql:postgresql:42.2.5'
     }
 }
+
+bootJar {
+    enabled = false
+}
+
+dependencies {
+    compile project(':commandside')
+    compile project(':queryside')
+}
