@@ -37,4 +37,9 @@ public class ProductController {
         return commandGateway.send(command);
     }
 
+    @GetMapping
+    public String get() {
+        return "It works!";
+    }
+
 }
