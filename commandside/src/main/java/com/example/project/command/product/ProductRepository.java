@@ -1,4 +1,4 @@
-package command.product;
+package com.example.project.command.product;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

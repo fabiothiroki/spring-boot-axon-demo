@@ -1,4 +1,4 @@
-package command.product;
+package com.example.project.command.product;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

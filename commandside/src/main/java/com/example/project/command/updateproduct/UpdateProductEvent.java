@@ -1,4 +1,4 @@
-package command.updateproduct;
+package com.example.project.command.updateproduct;
 
 public class UpdateProductEvent {
 

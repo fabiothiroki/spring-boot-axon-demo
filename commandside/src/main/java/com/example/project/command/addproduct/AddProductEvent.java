@@ -1,4 +1,4 @@
-package command.addproduct;
+package com.example.project.command.addproduct;
 
 public class AddProductEvent {
 

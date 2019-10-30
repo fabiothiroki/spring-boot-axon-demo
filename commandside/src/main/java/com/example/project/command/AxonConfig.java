@@ -1,4 +1,4 @@
-package command;
+package com.example.project.command;
 
 import com.mongodb.MongoClient;
 import org.axonframework.eventsourcing.eventstore.EventStorageEngine;

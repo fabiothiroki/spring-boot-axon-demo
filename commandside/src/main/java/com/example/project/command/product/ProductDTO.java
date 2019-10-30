@@ -1,4 +1,4 @@
-package command.product;
+package com.example.project.command.product;
 
 public class ProductDTO {
 

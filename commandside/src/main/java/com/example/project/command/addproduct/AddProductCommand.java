@@ -1,4 +1,4 @@
-package command.addproduct;
+package com.example.project.command.addproduct;
 
 
 import org.axonframework.modelling.command.TargetAggregateIdentifier;
