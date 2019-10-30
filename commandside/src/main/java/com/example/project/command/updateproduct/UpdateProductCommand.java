@@ -1,4 +1,4 @@
-package command.updateproduct;
+package com.example.project.command.updateproduct;
 
 import org.axonframework.modelling.command.TargetAggregateIdentifier;
 

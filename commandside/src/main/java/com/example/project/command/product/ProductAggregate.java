@@ -1,9 +1,9 @@
 package command.product;
 
-import command.addproduct.AddProductCommand;
-import command.addproduct.AddProductEvent;
-import command.updateproduct.UpdateProductCommand;
-import command.updateproduct.UpdateProductEvent;
+import com.example.project.command.addproduct.AddProductCommand;
+import com.example.project.command.addproduct.AddProductEvent;
+import com.example.project.command.updateproduct.UpdateProductCommand;
+import com.example.project.command.updateproduct.UpdateProductEvent;
 import lombok.extern.slf4j.Slf4j;
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventsourcing.EventSourcingHandler;

@@ -1,7 +1,7 @@
-package command.product;
+package com.example.project.command.product;
 
-import command.addproduct.AddProductCommand;
-import command.updateproduct.UpdateProductCommand;
+import com.example.project.command.addproduct.AddProductCommand;
+import com.example.project.command.updateproduct.UpdateProductCommand;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -35,6 +35,11 @@ public class ProductController {
                 dto.getId(),
                 dto.getQuantity());
         return commandGateway.send(command);
+    }
+
+    @GetMapping
+    public String get() {
+        return "It works!";
     }
 
 }

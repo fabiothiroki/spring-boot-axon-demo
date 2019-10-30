@@ -2,9 +2,6 @@ buildscript {
     repositories { mavenCentral() }
 }
 
-ext { springBootVersion = '2.1.6.RELEASE' }
-
-
 jar {
     version = '0.0.1-SNAPSHOT'
 }
@@ -13,7 +10,7 @@ sourceCompatibility = 1.8
 repositories { mavenCentral() }
 
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter-data-mongodb')
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
 
     compile('org.axonframework:axon-spring-boot-starter:4.1.2') {
         exclude group: 'org.axonframework', module: 'axon-server-connector'

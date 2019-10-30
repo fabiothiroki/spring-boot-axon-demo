@@ -13,7 +13,9 @@ plugins {
 allprojects {
     apply plugin: 'java'
     apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
 
+    group = 'com.example.project'
 
     repositories {
         mavenCentral()
@@ -31,4 +33,13 @@ allprojects {
 
         runtimeOnly 'org.postgresql:postgresql:42.2.5'
     }
+}
+
+bootJar {
+    enabled = false
+}
+
+dependencies {
+    compile project(':commandside')
+    compile project(':queryside')
 }

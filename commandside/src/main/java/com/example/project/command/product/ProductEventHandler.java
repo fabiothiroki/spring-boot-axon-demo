@@ -1,7 +1,7 @@
-package command.product;
+package com.example.project.command.product;
 
-import command.addproduct.AddProductEvent;
-import command.updateproduct.UpdateProductEvent;
+import com.example.project.command.addproduct.AddProductEvent;
+import com.example.project.command.updateproduct.UpdateProductEvent;
 import lombok.extern.slf4j.Slf4j;
 import org.axonframework.eventhandling.EventHandler;
 import org.springframework.beans.factory.annotation.Autowired;
