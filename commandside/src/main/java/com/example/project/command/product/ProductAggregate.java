@@ -1,4 +1,4 @@
-package command.product;
+package com.example.project.command.product;
 
 import com.example.project.command.addproduct.AddProductCommand;
 import com.example.project.command.addproduct.AddProductEvent;
