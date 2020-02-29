@@ -11,25 +11,21 @@ import org.springframework.stereotype.Component;
 @Component
 public class ProductEventHandler {
 
-    @Autowired
-    private ProductRepository productRepository;
+//    @Autowired
+//    private ProductAggregateRepository productAggregateRepository;
 
     @EventHandler
     public void on(AddProductEvent event) {
         System.out.println("A product was added! " + event );
 
-        Product product = new Product(event.getId(), event.getName(), event.getQuantity());
-
-        this.productRepository.save(product);
+//        ProductAggregate product = new ProductAggregate(event);
+//
+//        this.productAggregateRepository.save(product);
 
     }
 
     @EventHandler
     public void on(UpdateProductEvent event) {
         System.out.println("A product was updated! " + event );
-
-//        Product product = new Product(event.getId(), event.getName(), event.getQuantity());
-//        this.productRepository.save(product);
-
     }
 }
