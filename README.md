@@ -1,4 +1,6 @@
-# spring-boot-axon-demo
+# Spring Boot Axon Demo
+
+A sample application of tutorial: [CQRS using Java and Axon](https://dev.to/fabiothiroki/cqrs-basics-and-application-structure-2ac2).
 
 ## Local development
 
