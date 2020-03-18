@@ -10,15 +10,25 @@ import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.modelling.command.AggregateIdentifier;
 import org.axonframework.spring.stereotype.Aggregate;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 import static org.axonframework.modelling.command.AggregateLifecycle.apply;
 
 @Slf4j
 @Aggregate
+@Entity
 public class ProductAggregate {
 
     @AggregateIdentifier
+    @Id
     private Long id;
+
+    @Column
     private String name;
+
+    @Column
     private int quantity;
 
     @CommandHandler
