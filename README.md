@@ -1,4 +1,5 @@
 # Spring Boot Axon Demo
+[![Java CI with Gradle](https://github.com/fabiothiroki/spring-boot-axon-demo/actions/workflows/gradle.yml/badge.svg)](https://github.com/fabiothiroki/spring-boot-axon-demo/actions/workflows/gradle.yml)
 
 A sample application of tutorial: [CQRS using Java and Axon](https://dev.to/fabiothiroki/cqrs-basics-and-application-structure-2ac2).
 
